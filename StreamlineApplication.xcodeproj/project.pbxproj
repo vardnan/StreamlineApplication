@@ -13,6 +13,7 @@
 		4339D30125F511E0005388E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4339D2FF25F511E0005388E3 /* Main.storyboard */; };
 		4339D30325F511E1005388E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4339D30225F511E1005388E3 /* Assets.xcassets */; };
 		4339D30625F511E1005388E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4339D30425F511E1005388E3 /* LaunchScreen.storyboard */; };
+		43D7CBD525F5631200868F46 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D7CBD425F5631200868F46 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		4339D33525F51A75005388E3 /* NewYorkExtraLarge-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-Regular.otf"; sourceTree = "<group>"; };
 		4339D33625F51A75005388E3 /* NewYorkExtraLarge-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-BlackItalic.otf"; sourceTree = "<group>"; };
 		4339D33725F51A75005388E3 /* NewYorkExtraLarge-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-Heavy.otf"; sourceTree = "<group>"; };
+		43D7CBD425F5631200868F46 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				4339D2F925F511E0005388E3 /* AppDelegate.swift */,
 				4339D2FB25F511E0005388E3 /* SceneDelegate.swift */,
 				4339D2FD25F511E0005388E3 /* ViewController.swift */,
+				43D7CBD425F5631200868F46 /* ListView.swift */,
 				4339D2FF25F511E0005388E3 /* Main.storyboard */,
 				4339D30225F511E1005388E3 /* Assets.xcassets */,
 				4339D30425F511E1005388E3 /* LaunchScreen.storyboard */,
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D7CBD525F5631200868F46 /* ListView.swift in Sources */,
 				4339D2FE25F511E0005388E3 /* ViewController.swift in Sources */,
 				4339D2FA25F511E0005388E3 /* AppDelegate.swift in Sources */,
 				4339D2FC25F511E0005388E3 /* SceneDelegate.swift in Sources */,
