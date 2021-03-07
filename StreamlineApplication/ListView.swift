@@ -9,6 +9,8 @@ import UIKit
 
 class ListView: UIViewController {
     
+    // Actions
+    
 
     @IBAction func oneButtonPressed(_ sender: UIButton) {
     }
@@ -24,7 +26,21 @@ class ListView: UIViewController {
     @IBAction func fourButtonPressed(_ sender: UIButton) {
     }
     
+    @IBAction func addButtonPressed(_ sender: UIButton) {
+    }
+    
+    
+    // Outlets
+    
     @IBOutlet weak var listTitle: UILabel!
+    
+    @IBOutlet weak var oneButton: UIButton!
+    
+    @IBOutlet weak var twoButton: UIButton!
+    
+    @IBOutlet weak var threeButton: UIButton!
+    
+    @IBOutlet weak var fourButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

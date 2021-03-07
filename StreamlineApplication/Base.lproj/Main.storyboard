@@ -145,6 +145,9 @@
                                 <rect key="frame" x="317" y="788" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="AddButton"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="7yA-kQ-W95" eventType="touchUpInside" id="m3S-2E-BnD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g7I-Pp-Fki"/>
@@ -152,7 +155,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="FOX-sS-gCx"/>
                     <connections>
+                        <outlet property="fourButton" destination="QSJ-5q-1py" id="PP8-Uu-Tes"/>
                         <outlet property="listTitle" destination="Aop-Us-f5L" id="gXE-P3-uLM"/>
+                        <outlet property="oneButton" destination="25x-us-1ap" id="yJO-Bi-sBi"/>
+                        <outlet property="threeButton" destination="WJg-x7-I2r" id="H0B-RF-Ls5"/>
+                        <outlet property="twoButton" destination="d4w-um-zpx" id="xAI-MA-rWU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPH-Vx-ZvH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
