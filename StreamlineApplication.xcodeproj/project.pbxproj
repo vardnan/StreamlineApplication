@@ -24,6 +24,18 @@
 		4339D30225F511E1005388E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4339D30525F511E1005388E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4339D30725F511E1005388E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4339D32C25F51A75005388E3 /* NewYorkExtraLarge-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-BoldItalic.otf"; sourceTree = "<group>"; };
+		4339D32D25F51A75005388E3 /* NewYorkExtraLarge-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-Medium.otf"; sourceTree = "<group>"; };
+		4339D32E25F51A75005388E3 /* NewYorkExtraLarge-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-HeavyItalic.otf"; sourceTree = "<group>"; };
+		4339D32F25F51A75005388E3 /* NewYorkExtraLarge-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-Black.otf"; sourceTree = "<group>"; };
+		4339D33025F51A75005388E3 /* NewYorkExtraLarge-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-RegularItalic.otf"; sourceTree = "<group>"; };
+		4339D33125F51A75005388E3 /* NewYorkExtraLarge-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		4339D33225F51A75005388E3 /* NewYorkExtraLarge-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-Bold.otf"; sourceTree = "<group>"; };
+		4339D33325F51A75005388E3 /* NewYorkExtraLarge-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-MediumItalic.otf"; sourceTree = "<group>"; };
+		4339D33425F51A75005388E3 /* NewYorkExtraLarge-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-Semibold.otf"; sourceTree = "<group>"; };
+		4339D33525F51A75005388E3 /* NewYorkExtraLarge-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-Regular.otf"; sourceTree = "<group>"; };
+		4339D33625F51A75005388E3 /* NewYorkExtraLarge-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-BlackItalic.otf"; sourceTree = "<group>"; };
+		4339D33725F51A75005388E3 /* NewYorkExtraLarge-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-Heavy.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 		4339D2F825F511E0005388E3 /* StreamlineApplication */ = {
 			isa = PBXGroup;
 			children = (
+				4339D31225F51A21005388E3 /* Fonts */,
 				4339D2F925F511E0005388E3 /* AppDelegate.swift */,
 				4339D2FB25F511E0005388E3 /* SceneDelegate.swift */,
 				4339D2FD25F511E0005388E3 /* ViewController.swift */,
@@ -65,6 +78,25 @@
 				4339D30725F511E1005388E3 /* Info.plist */,
 			);
 			path = StreamlineApplication;
+			sourceTree = "<group>";
+		};
+		4339D31225F51A21005388E3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4339D32F25F51A75005388E3 /* NewYorkExtraLarge-Black.otf */,
+				4339D33625F51A75005388E3 /* NewYorkExtraLarge-BlackItalic.otf */,
+				4339D33225F51A75005388E3 /* NewYorkExtraLarge-Bold.otf */,
+				4339D32C25F51A75005388E3 /* NewYorkExtraLarge-BoldItalic.otf */,
+				4339D33725F51A75005388E3 /* NewYorkExtraLarge-Heavy.otf */,
+				4339D32E25F51A75005388E3 /* NewYorkExtraLarge-HeavyItalic.otf */,
+				4339D32D25F51A75005388E3 /* NewYorkExtraLarge-Medium.otf */,
+				4339D33325F51A75005388E3 /* NewYorkExtraLarge-MediumItalic.otf */,
+				4339D33525F51A75005388E3 /* NewYorkExtraLarge-Regular.otf */,
+				4339D33025F51A75005388E3 /* NewYorkExtraLarge-RegularItalic.otf */,
+				4339D33425F51A75005388E3 /* NewYorkExtraLarge-Semibold.otf */,
+				4339D33125F51A75005388E3 /* NewYorkExtraLarge-SemiboldItalic.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
