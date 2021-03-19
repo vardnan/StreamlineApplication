@@ -66,8 +66,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GOz-F9-bD4"/>
                     <connections>
-                        <outlet property="testButton" destination="zZQ-5o-LKD" id="gUZ-5M-hxI"/>
-                        <segue destination="7yA-kQ-W95" kind="show" identifier="importantUrgentSegue" id="v4A-4i-Eri"/>
+                        <segue destination="7yA-kQ-W95" kind="show" identifier="segueToListView" id="v4A-4i-Eri"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

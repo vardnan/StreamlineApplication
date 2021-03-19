@@ -35,6 +35,7 @@ class ListView: UIViewController {
     
     @IBOutlet weak var addButton: UIButton!
     
+    // Status update of navigation buttons
     
     func buttonStatusUpdate() {
         
