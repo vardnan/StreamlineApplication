@@ -9,12 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    @IBAction func importantUrgent_Button(_ sender: UIButton) {
+
+    @IBAction func importantUrgant_Button(_ sender: UIButton) {
+        performSegue(withIdentifier: "importantUrgentSegue", sender: nil)
     }
     
     
     @IBAction func importantNotUrgent_Button(_ sender: UIButton) {
+    
     }
     
     
@@ -24,6 +26,8 @@ class ViewController: UIViewController {
     @IBAction func notImportantUrgent_Button(_ sender: UIButton) {
     }
     
+    
+    @IBOutlet weak var testButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

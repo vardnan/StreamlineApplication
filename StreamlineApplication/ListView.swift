@@ -9,26 +9,17 @@ import UIKit
 
 class ListView: UIViewController {
     
-    // Actions
-    
-
-    @IBAction func oneButtonPressed(_ sender: UIButton) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        oneButton.setImage(UIImage(named: "1_Button_True.svg"), for: .normal)
+        
     }
     
-    @IBAction func twoButtonPressed(_ sender: UIButton) {
-    }
-    
- 
-    @IBAction func threeButtonPressed(_ sender: UIButton) {
-    }
-    
-    
-    @IBAction func fourButtonPressed(_ sender: UIButton) {
-    }
-    
-    @IBAction func addButtonPressed(_ sender: UIButton) {
-    }
-    
+    var oneButtonStatus:Bool = true
+    var twoButtonStatus:Bool = false
+    var threeButtonStatus:Bool = false
+    var fourButtonStatus:Bool = false
     
     // Outlets
     
@@ -42,10 +33,102 @@ class ListView: UIViewController {
     
     @IBOutlet weak var fourButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var addButton: UIButton!
+    
+    
+    func buttonStatusUpdate() {
+        
+        if oneButtonStatus == false {
+            oneButton.setImage(UIImage(named: "1_Button_False.svg"), for: .normal)
+            
+        }
+        
+        if oneButtonStatus == true {
+            oneButton.setImage(UIImage(named: "1_Button_True.svg"), for: .normal)
+        }
+        
+        if twoButtonStatus == false {
+            twoButton.setImage(UIImage(named: "2_Button_False.svg"), for: .normal)
+            
+        }
+        
+        if twoButtonStatus == true {
+            twoButton.setImage(UIImage(named: "2_Button_True.svg"), for: .normal)
+        }
+        
+        if threeButtonStatus == false {
+            threeButton.setImage(UIImage(named: "3_Button_False.svg"), for: .normal)
+        }
+        
+        if threeButtonStatus == true {
+            threeButton.setImage(UIImage(named: "3_Button_True.svg"), for: .normal)
+        }
+        
+        if fourButtonStatus == false {
+            fourButton.setImage(UIImage(named: "4_Button_False.svg"), for: .normal)
+        }
+        
+        if fourButtonStatus == true {
+            fourButton.setImage(UIImage(named: "4_Button_True.svg"), for: .normal)
+        }
     }
-
+    
+    // Actions
+    
+    
+    @IBAction func oneButtonPressed(_ sender: UIButton) {
+        
+        oneButtonStatus = true
+        twoButtonStatus = false
+        threeButtonStatus = false
+        fourButtonStatus = false
+       
+        buttonStatusUpdate()
+        
+    
+        
+    }
+    
+    @IBAction func twoButtonPressed(_ sender: UIButton) {
+        
+        
+        oneButtonStatus = false
+        twoButtonStatus = true
+        threeButtonStatus = false
+        fourButtonStatus = false
+        
+        buttonStatusUpdate()
+        
+        
+    }
+    
+    
+    @IBAction func threeButtonPressed(_ sender: UIButton) {
+        
+        oneButtonStatus = false
+        twoButtonStatus = false
+        threeButtonStatus = true
+        fourButtonStatus = false
+       
+        buttonStatusUpdate()
+        
+    }
+    
+    
+    @IBAction func fourButtonPressed(_ sender: UIButton) {
+        
+        oneButtonStatus = false
+        twoButtonStatus = false
+        threeButtonStatus = false
+        fourButtonStatus = true
+       
+        buttonStatusUpdate()
+        
+    }
+    
+    @IBAction func addButtonPressed(_ sender: UIButton) {
+        
+    }
+    
 }
 
