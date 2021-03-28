@@ -116,18 +116,18 @@
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="important &amp; urgent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aop-Us-f5L">
-                                <rect key="frame" x="60" y="178" width="234" height="30"/>
+                                <rect key="frame" x="60" y="182" width="234" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NewYorkExtraLarge-Bold" family="New York Extra Large" pointSize="25"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rz4-2s-Cjw">
-                                <rect key="frame" x="60" y="237" width="317" height="452"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rz4-2s-Cjw" customClass="TableView" customModule="StreamlineApplication" customModuleProvider="target">
+                                <rect key="frame" x="60" y="237" width="317" height="510"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IKV-Ic-pgS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="IKV-Ic-pgS">
                                         <rect key="frame" x="0.0" y="28" width="317" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IKV-Ic-pgS" id="JX5-UT-I4g">
@@ -155,6 +155,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="FOX-sS-gCx"/>
                     <connections>
+                        <outlet property="TodoTableView" destination="Rz4-2s-Cjw" id="Zv3-jk-t6J"/>
                         <outlet property="addButton" destination="1eE-Ie-T15" id="XaO-JU-omP"/>
                         <outlet property="fourButton" destination="QSJ-5q-1py" id="PP8-Uu-Tes"/>
                         <outlet property="listTitle" destination="Aop-Us-f5L" id="gXE-P3-uLM"/>

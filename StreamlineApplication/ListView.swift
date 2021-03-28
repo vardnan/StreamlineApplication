@@ -9,19 +9,31 @@ import UIKit
 
 class ListView: UIViewController {
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
         oneButton.setImage(UIImage(named: "1_Button_True.svg"), for: .normal)
         
+        TodoTableView.delegate = self
+        TodoTableView.dataSource = self
+        
     }
+    
+    // Initial variables
     
     var oneButtonStatus:Bool = true
     var twoButtonStatus:Bool = false
     var threeButtonStatus:Bool = false
     var fourButtonStatus:Bool = false
     
+    var todos = ["One", "Two", "Three"]
+    
     // Outlets
+    
+   
+    @IBOutlet weak var TodoTableView: UITableView!
     
     @IBOutlet weak var listTitle: UILabel!
     
@@ -129,6 +141,28 @@ class ListView: UIViewController {
     
     @IBAction func addButtonPressed(_ sender: UIButton) {
         
+    }
+    
+}
+
+//MARK — UITableView methods
+
+extension ListView: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("tap tap")
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        todos.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        cell.textLabel?.text = todos[indexPath.row]
+        
+        return cell
     }
     
 }
