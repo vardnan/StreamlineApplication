@@ -27,12 +27,12 @@ class ListView: UIViewController {
     var twoButtonStatus:Bool = false
     var threeButtonStatus:Bool = false
     var fourButtonStatus:Bool = false
-    
     var todos = ["One", "Two", "Three"]
+    var checkmarkCount = 0
     
     // Outlets
     
-   
+    
     @IBOutlet weak var TodoTableView: UITableView!
     
     @IBOutlet weak var listTitle: UILabel!
@@ -47,7 +47,7 @@ class ListView: UIViewController {
     
     @IBOutlet weak var addButton: UIButton!
     
-    // Status update of navigation buttons
+        // Status update of navigation buttons
     
     func buttonStatusUpdate() {
         
@@ -95,10 +95,10 @@ class ListView: UIViewController {
         twoButtonStatus = false
         threeButtonStatus = false
         fourButtonStatus = false
-       
+        
         buttonStatusUpdate()
         
-    
+        
         
     }
     
@@ -122,7 +122,7 @@ class ListView: UIViewController {
         twoButtonStatus = false
         threeButtonStatus = true
         fourButtonStatus = false
-       
+        
         buttonStatusUpdate()
         
     }
@@ -134,13 +134,33 @@ class ListView: UIViewController {
         twoButtonStatus = false
         threeButtonStatus = false
         fourButtonStatus = true
-       
+        
         buttonStatusUpdate()
         
     }
     
     @IBAction func addButtonPressed(_ sender: UIButton) {
         
+        var textField = UITextField()
+        let alert = UIAlertController(title: "Add new task", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add task", style: .default) { (action) in
+            
+            // Action when alert button is pressed
+            self.todos.append(textField.text!)
+            
+            self.TodoTableView.reloadData()
+    
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new task"
+            textField = alertTextField
+        }
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
     }
     
 }
@@ -149,8 +169,25 @@ class ListView: UIViewController {
 
 extension ListView: UITableViewDelegate, UITableViewDataSource {
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("tap tap")
+        
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        
+        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
+            tableView.cellForRow(at: indexPath)?.accessoryType = .none
+            checkmarkCount = 0
+        }
+        
+        else {
+            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+            checkmarkCount = 1
+
+        }
+        
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -158,9 +195,24 @@ extension ListView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
+        cell.tintColor = UIColor(red: 0.333, green: 0.333, blue: 0.333, alpha: 1)
+        
         cell.textLabel?.text = todos[indexPath.row]
+        
+        
+       /* let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: (cell.textLabel?.text)!)
+        
+            attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 3, range: NSMakeRange(0, attributeString.length))
+        
+        if checkmarkCount == 1 {
+
+            cell.textLabel?.attributedText = attributeString
+        } */
+        
+        
         
         return cell
     }
